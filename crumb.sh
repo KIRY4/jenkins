@@ -1,0 +1,4 @@
+crumb=$(curl -u "jenkinsrmt:1234" -s 'http://ec2-35-156-34-61.eu-central-1.compute.amazonaws.com:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)')
+#curl -u "jenkinsrmt:1234" -H "$crumb" -X POST http://ec2-35-156-34-61.eu-central-1.compute.amazonaws.com:8080/job/ENV_udemy/build?delay=0sec
+#curl -u "jenkinsrmt:1234" -H "$crumb" -X POST  http://ec2-35-156-34-61.eu-central-1.compute.amazonaws.com:8080/job/MYSQL-BACKUP-S3_udemy/buildWithParameters?DB_HOST=db_host&DB_NAME=testdb&BUCKET_NAME=kirtestbucket
+curl -u "jenkinsrmt:1234" -H "$crumb" -X POST  http://ec2-35-156-34-61.eu-central-1.compute.amazonaws.com:8080/job/ansible-users-db_udemy/buildWithParameters?AGE=25
